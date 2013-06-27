@@ -95,7 +95,7 @@ public final class UrlStringUtils {
                 importantParts.add(pathParts[i]);
             }
         }
-        if (!pathParts[pathParts.length - 1].isEmpty()) {
+        if (pathParts.length > 0 && !pathParts[pathParts.length - 1].isEmpty()) {
             final String fileNameNoExt = pathParts[pathParts.length - 1].replaceAll("\\..*{0,5}$", "");
             importantParts.add(fileNameNoExt);
         }
